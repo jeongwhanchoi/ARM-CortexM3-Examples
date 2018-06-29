@@ -1,0 +1,23 @@
+*** Creating Trace Output File 'ARM_CortexM3_FND.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '"startup_lpc17xx.o"'
+### List of Objects: adding '"system_lpc17xx.o"'
+### List of Objects: adding '"core_cm3.o"'
+### List of Objects: adding '"arm_cortexm3_fnd.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 "startup_lpc17xx.o" "system_lpc17xx.o" "core_cm3.o" "arm_cortexm3_fnd.o" 
+--strict --scatter "ARM_CortexM3_FND.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\ARM_CortexM3_FND.map" -o ARM_CortexM3_FND.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: 'ARM_CortexM3_FND.axf'
+### ADS-LD Command File: 'ARM_CortexM3_FND.lnp'
+### Checking for dirty Components...
+### Creating CmdFile 'ARM_CortexM3_FND.lnp', Handle=0x000008E4
+### Writing '.lnp' file
+### ADS-LD Command file 'ARM_CortexM3_FND.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

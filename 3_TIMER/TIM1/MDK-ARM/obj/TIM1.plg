@@ -1,0 +1,39 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\WORK\ARM_CortexM3_NXP\ARM_CortexM3_NXP Example\Examples\9. TIMER\TIM1\TIM1.uvproj
+Project File Date:  12/18/2013
+
+<h2>Output:</h2>
+Rebuild target 'Target 1'
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling lpc17xx_gpio.c...
+..\..\..\Drivers\source\lpc17xx_gpio.c(526): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_gpio.c(532): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_gpio.c(564): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_gpio.c(570): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_gpio.c(596): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_gpio.c(621): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_gpio.c(641): warning:  #186-D: pointless comparison of unsigned integer with zero
+compiling lpc17xx_timer.c...
+..\..\..\Drivers\source\lpc17xx_timer.c(108): warning:  #68-D: integer conversion resulted in a change of sign
+..\..\..\Drivers\source\lpc17xx_timer.c(246): warning:  #550-D: variable "timer" was set but never used
+..\..\..\Drivers\source\lpc17xx_timer.c(391): warning:  #550-D: variable "timer" was set but never used
+..\..\..\Drivers\source\lpc17xx_timer.c(438): warning:  #550-D: variable "timer" was set but never used
+compiling lpc17xx_clkpwr.c...
+compiling lpc17xx_libcfg_default.c...
+compiling TIM1.c...
+TIM1.c(70): warning:  #1-D: last line of file ends without a newline
+linking...
+Program Size: Code=3788 RO-data=228 RW-data=16 ZI-data=528  
+FromELF: creating hex file...
+".\obj\TIM1.axf" - 0 Errors, 12 Warning(s).
+Load "D:\\WORK\\ARM_CortexM3_NXP\\ARM_CortexM3_NXP Example\\Examples\\9. TIMER\\TIM1\\obj\\TIM1.axf" 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+Application running ...

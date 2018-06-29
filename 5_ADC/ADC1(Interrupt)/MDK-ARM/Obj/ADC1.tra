@@ -1,0 +1,31 @@
+*** Creating Trace Output File '.\Obj\ADC1.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\obj\startup_lpc17xx.o"'
+### List of Objects: adding '".\obj\core_cm3.o"'
+### List of Objects: adding '".\obj\system_lpc17xx.o"'
+### List of Objects: adding '".\obj\lpc17xx_adc.o"'
+### List of Objects: adding '".\obj\lpc17xx_clkpwr.o"'
+### List of Objects: adding '".\obj\lpc17xx_libcfg_default.o"'
+### List of Objects: adding '".\obj\lpc17xx_nvic.o"'
+### List of Objects: adding '".\obj\lpc17xx_pinsel.o"'
+### List of Objects: adding '".\obj\lpc17xx_timer.o"'
+### List of Objects: adding '".\obj\lpc17xx_uart.o"'
+### List of Objects: adding '".\obj\adc_interrupt_test.o"'
+### List of Objects: adding '".\obj\debug_frmwrk.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 ".\obj\startup_lpc17xx.o" ".\obj\core_cm3.o" ".\obj\system_lpc17xx.o" ".\obj\lpc17xx_adc.o" ".\obj\lpc17xx_clkpwr.o" ".\obj\lpc17xx_libcfg_default.o" ".\obj\lpc17xx_nvic.o" ".\obj\lpc17xx_pinsel.o" ".\obj\lpc17xx_timer.o" ".\obj\lpc17xx_uart.o" ".\obj\adc_interrupt_test.o" ".\obj\debug_frmwrk.o" 
+--library_type=microlib --strict --scatter ".\Obj\ADC1.sct" 
+--summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\Lst\ADC1.map" -o .\Obj\ADC1.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\Obj\ADC1.axf'
+### ADS-LD Command File: '.\Obj\ADC1.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\Obj\ADC1.lnp', Handle=0x00000610
+### Writing '.lnp' file
+### ADS-LD Command file '.\Obj\ADC1.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.

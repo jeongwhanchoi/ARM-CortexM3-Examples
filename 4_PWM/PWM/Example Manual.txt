@@ -1,0 +1,43 @@
+
+	PWM Example 설명
+
+	source_code -> Example -> 4_PWM -> PWM  - 예제 경로
+
+-------------------------------------------------------------------------------
+
+	
+	PWM 예제는 PWM1를 사용하여 LED를 제어하는 예제 입니다.
+	
+	기본적인 LED 설정 방법은 동일하며 PWM1 에 대한 추가 설정이 필요합니다.
+	
+	PWM의 Timer Match 기능을 사용하여 밝기를 LED를 제어합니다. 	
+
+    PWM 0번 채널과 P1.20 (PWM 1.2), P1.21 (PWM1.3), P1.23 (PWM1.4), P1.24 (PWM1.5)를 사용하여 총 5개의 
+	
+	Channel을 제어합니다. 
+	
+	0번 채널은 내부 PWM Timer를 사용하여 Timer Match 일 경우 Timer 값을 다시 Reset 시키는 반복적 처리를하며
+	
+	나머지 타이머의 최대치 기준점이 됩니다.
+	
+	나머지 채널들은 0번 채널의 최대 타이머 값을 기준으로 Duty rate를 조정하게 됩니다. (최대치 500) 각각 50, 150, 250, 350
+		
+	PWMTimerSetup.PrescaleOption 을 통해 Prescale 값을 어떻게 사용 할 것인지 지정 할 수 있습니다. 
+	(1. Clock 동일시, 2. microsencond 단위) 
+	
+	PWMTimerSetup.PrescaleValue는 Option으로 설정 값에 따라 1회 기준을 정의 합니다. (1회당 1us)
+	
+	PWM_MatchUpdate(LPC_PWM1, 0, 500, PWM_MATCH_UPDATE_NOW);를 통해서 0번 채널을 최대 500까지 지정해주고
+	
+	나머지 채널은 아래와 같이 설정합니다.
+	
+	PWM_MatchUpdate(LPC_PWM1, 3, 	50, PWM_MATCH_UPDATE_NOW);
+	PWM_MatchUpdate(LPC_PWM1, 4, 150, PWM_MATCH_UPDATE_NOW);
+	PWM_MatchUpdate(LPC_PWM1, 5, 250, PWM_MATCH_UPDATE_NOW);
+	PWM_MatchUpdate(LPC_PWM1, 6, 350, PWM_MATCH_UPDATE_NOW);
+	
+	나머지 설정은 모두 Disable로 설정합니다. 이렇게 설정하게되면 타이머가 50, 150, 250, 350 구간에 일치하더라도 아무런 
+	
+	이벤트가 발생하지 않고 지나가게 되고, 500에 도달하면 그때 다시 타이머값을 리셋하여 다시 처음부터 시작하게 됩니다.
+	
+	이렇게되면 4개의 채널들은 일정 길이의 PULSE를 지속적으로 출력하게 됩니다. 

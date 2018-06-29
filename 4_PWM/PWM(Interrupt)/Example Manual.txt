@@ -1,0 +1,48 @@
+
+	PWM Example 설명
+
+	source_code -> Example -> 4_PWM -> PWM  - 예제 경로
+
+	source_code -> Example -> 4_PWM -> PWM  -> 예제 참고 
+-------------------------------------------------------------------------------
+
+	PWM_Interrupt 예제는 PWM를 사용하여 LED를 제어하는 예제 입니다.
+	
+	기본적인 LED 성정 방법은 동일하며 PWM1 에 대한 추가 설정이 필요합니다.
+	
+	단순한 PWM Timer기능은  이전 예제인 TIMER와 크게 다른 점이 없는 예제 입니다.
+	
+	PWM은 대부분 TIMER의 기능을 응용하는 기술이기 때문에 PWM의 다른 기능에서도 TIMER의 기능이 사용됩니다.
+	
+	이 예제에는 TIMER에서 Interrupt를 사용하여 IRQ Handler에 진입 했던 과정을 PWM Timer를 사용하여 진입하고 
+	
+	사용 Channel을 늘려 제어하는법을 알 수 있습니다. 
+	
+	P1.20 (PWM 1.2), P1.21 (PWM1.3), P1.23 (PWM1.4), P1.24 (PWM1.5)를 사용하여 총 4개의 Channel을 제어합니다.
+	
+	Datasheet를 참고하여 PWM1 기능이 있는 PIN을 선정 하였습니다. 
+	
+	여러 기능을 사용하기 위해선 Datasheet의 PIN Map을 자세히 들여다 봐야합니다.
+	
+	TIMER와 비슷하게 나머지 설정을 맞추어 나갑니다.
+	
+	PWMTimerSetup.PrescaleOption 을 통해 Prescale 값을 어떻게 사용 할 것인지 지정 할 수 있습니다. 
+	(1. Clock 동일시, 2. microsencond 단위) 
+	
+	PWMTimerSetup.PrescaleValue는 Option으로 설정 값에 따라 1회 기준을 정의 합니다. (1회당 100us)
+	
+	PWM_MatchUpdate(LPC_PWM1, 2, 10000, PWM_MATCH_UPDATE_NOW);를 통해 채널 당 적용 시킬 카운트 
+	
+	횟수를 지정합니다. (10000번)
+	
+	PWM1은 6개의 채널이 존재하고 (1~6) PWMMatchSetup.MatchChannel를 통해 채널을 정해줍니다.
+	
+	PWMMathchSetup 구조체를 통해서 각 채널마다 값이 일치했을 때 발생하는 Event에 대한 정의를 해주고 설정을 적용 합니다.
+	
+	PWM_ChannelCmd를 통해 각 채널을 활성화하고 NVIC_EnableIRQ Interrupt를 Enable 시켜줍니다. 
+	
+	그리고 난 뒤 PWM_ResetCounter를 Reset을 한번하고 Counter와 PWM을 Start합니다.
+	
+	PWM1_IRQHandler는 채널이 4개가 접근하기 때문에 PWM_GetIntStatus 함수를 통하여 몇번째 채널이 접근했는지
+	
+	알 수 있습니다. 채널을 구분해주고 해당 채널의 LED를 켜주게 됩니다.

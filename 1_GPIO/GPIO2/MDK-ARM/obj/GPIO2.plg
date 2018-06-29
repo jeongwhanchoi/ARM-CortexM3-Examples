@@ -1,0 +1,46 @@
+<html>
+<body>
+<pre>
+<h1>킮ision Build Log</h1>
+<h2>Project:</h2>
+D:\Work\2_ATC_ARM_CortexM3_NXP\문서자료\1_강의자료\2_ARM_CortexM3_NXP 2일교육\2_Source\2_Full_Example\Examples\7_2_GPIO_Ex\GPIO2\GPIO2.uvproj
+Project File Date:  11/15/2010
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling lpc17xx_gpio.c...
+..\..\..\Drivers\source\lpc17xx_gpio.c(526): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_gpio.c:                         if ((byteNum >= 0) && (byteNum <= 3)) {
+..\..\..\Drivers\source\lpc17xx_gpio.c:                                      ^
+..\..\..\Drivers\source\lpc17xx_gpio.c(532): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_gpio.c:                         if ((byteNum >= 0) && (byteNum <= 3)) {
+..\..\..\Drivers\source\lpc17xx_gpio.c:                                      ^
+..\..\..\Drivers\source\lpc17xx_gpio.c(564): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_gpio.c:                         if ((byteNum >= 0) && (byteNum <= 3)) {
+..\..\..\Drivers\source\lpc17xx_gpio.c:                                      ^
+..\..\..\Drivers\source\lpc17xx_gpio.c(570): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_gpio.c:                         if ((byteNum >= 0) && (byteNum <= 3)) {
+..\..\..\Drivers\source\lpc17xx_gpio.c:                                      ^
+..\..\..\Drivers\source\lpc17xx_gpio.c(596): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_gpio.c:                 if ((byteNum >= 0) && (byteNum <= 3)){
+..\..\..\Drivers\source\lpc17xx_gpio.c:                              ^
+..\..\..\Drivers\source\lpc17xx_gpio.c(621): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_gpio.c:                 if ((byteNum >= 0) && (byteNum <= 3)){
+..\..\..\Drivers\source\lpc17xx_gpio.c:                              ^
+..\..\..\Drivers\source\lpc17xx_gpio.c(641): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_gpio.c:                 if ((byteNum >= 0) && (byteNum <= 3)){
+..\..\..\Drivers\source\lpc17xx_gpio.c:                              ^
+..\..\..\Drivers\source\lpc17xx_gpio.c: ..\..\..\Drivers\source\lpc17xx_gpio.c: 7 warnings, 0 errors
+compiling GPIO2.c...
+linking...
+Program Size: Code=1676 RO-data=472 RW-data=4 ZI-data=516  
+FromELF: creating hex file...
+".\obj\GPIO2.axf" - 0 Error(s), 7 Warning(s).
+Load "D:\\Work\\2_ATC_ARM_CortexM3_NXP\\문서자료\\1_강의자료\\2_ARM_CortexM3_NXP 2일교육\\2_Source\\2_Full_Example\\Examples\\7_2_GPIO_Ex\\GPIO2\\obj\\GPIO2.AXF" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...

@@ -1,0 +1,14 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\WORK\ARM_CortexM3_NXP\ARM_CortexM3_NXP Example\Examples\14. LCD_Test\Blinky.uvproj
+Project File Date:  12/18/2013
+
+<h2>Output:</h2>
+Load "D:\\WORK\\ARM_CortexM3_NXP\\ARM_CortexM3_NXP Example\\Examples\\14. LCD_Test\\Obj\\Blinky.axf" 
+Erase Done.
+Programming Done.
+Verify OK.
+Application running ...

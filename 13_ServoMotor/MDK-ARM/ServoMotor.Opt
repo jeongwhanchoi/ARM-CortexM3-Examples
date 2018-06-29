@@ -1,0 +1,60 @@
+### uVision2 Project, (C) Keil Software
+### Do not modify !
+
+ cExt (*.c)
+ aExt (*.s*; *.src; *.a*)
+ oExt (*.obj)
+ lExt (*.lib)
+ tExt (*.txt; *.h; *.inc)
+ pExt (*.plm)
+ CppX (*.cpp)
+ DaveTm { 0,0,0,0,0,0,0,0 }
+
+Target (RAM), 0x0004 // Tools: 'ARM-ADS'
+Target (FLASH), 0x0004 // Tools: 'ARM-ADS'
+GRPOPT 1,(Startup Code),0,0,0
+GRPOPT 2,(System Code),0,0,0
+GRPOPT 3,(Source Code),0,0,0
+GRPOPT 4,(Documentation),0,0,0
+
+OPTFFF 1,1,2,0,0,0,0,0,<D:\Work\1_ATC_ARM_CortexM3_NXP\Source_code\17_ServoMotor\startup_LPC17xx.s><startup_LPC17xx.s> 
+OPTFFF 2,2,1,0,0,0,0,0,<D:\Work\1_ATC_ARM_CortexM3_NXP\Source_code\17_ServoMotor\system_LPC17xx.c><system_LPC17xx.c> 
+OPTFFF 3,3,1,0,0,0,0,0,<.\pwm.c><pwm.c> 
+OPTFFF 3,4,1,0,0,0,0,0,<.\pwmtest.c><pwmtest.c> 
+OPTFFF 4,5,5,0,0,0,0,0,<.\Abstract.txt><Abstract.txt> 
+
+
+TARGOPT 1, (RAM)
+ ADSCLK=12000000
+  OPTTT 0,1,1,0
+  OPTHX 1,65535,0,0,0
+  OPTLX 79,66,8,<.\RAM\>
+  OPTOX 16
+  OPTLT 1,1,1,0,1,1,0,1,0,0,0,0
+  OPTXL 1,1,1,1,1,1,1,0,0
+  OPTFL 0,0,1
+  OPTAX 0
+  OPTDL (SARMCM3.DLL)(-MPU)(DARMP1.DLL)(-pLPC1768)(SARMCM3.DLL)(-MPU)(TARMP1.DLL)(-pLPC1768)
+  OPTDBG 48638,1,()()()()()()()()()(.\RAM.ini) (BIN\UL2CM3.DLL)()()()
+  OPTDF 0x0
+  OPTLE <>
+  OPTLC <>
+EndOpt
+
+TARGOPT 2, (FLASH)
+ ADSCLK=12000000
+  OPTTT 0,1,1,0
+  OPTHX 1,65535,0,0,0
+  OPTLX 79,66,8,<.\FLASH\>
+  OPTOX 16
+  OPTLT 1,1,1,0,1,1,0,1,0,0,0,0
+  OPTXL 1,1,1,1,1,1,1,0,0
+  OPTFL 0,0,0
+  OPTAX 0
+  OPTDL (SARMCM3.DLL)(-MPU)(DARMP1.DLL)(-pLPC1768)(SARMCM3.DLL)(-MPU)(TARMP1.DLL)(-pLPC1768)
+  OPTDBG 49150,1,()()()()()()()()()() (BIN\UL2CM3.DLL)()()()
+  OPTDF 0x0
+  OPTLE <>
+  OPTLC <>
+EndOpt
+

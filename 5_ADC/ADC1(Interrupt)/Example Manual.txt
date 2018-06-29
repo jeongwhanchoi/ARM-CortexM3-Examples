@@ -1,0 +1,43 @@
+
+	ADC1 Example 설명
+
+	source_code -> Example -> 5_ADC1 -> ADC1(Interrupt)  - 예제 경로
+
+-------------------------------------------------------------------------------
+
+	ADC1 예제는 ADC	Interrupt 를 사용하여 Potentio(가변저항)의 ADC값을 읽어오는 예제 입니다.
+	
+	추가적으로 ADC 값은 UART0번(RS232)을 통해서 출력되게 됩니다.
+	
+	ADC PIN은 P0.25를 사용합니다. PIN을 ADC 모드로 사용하기 위해 AF 설정을 한다. ADC도 다른 기능들과 같이
+	
+	여러 채널이 존재 한다. (0 ~7) ADC와 해당 Channel에 대한 설정 및 초기화 과정을 진행합니다.
+	
+	마지막으로 Channel과 Interrupt를 활성화 시켜줍니다.
+	
+	여기서 다른 기능들과 차이점은 ADC_StartCmd로 ADC를 Start해주면 1회만  변환되기 때문에 다시 
+	
+	재 시작을 해줘야 한다. ADC_StartCmd로 변환을 하게 되면 바로 Interrupt가 발생 할 것 입니다.  
+	
+	ADC_IRQHandler로 진입하여 현재 채널 2번 활성화에 상태를 확인하고 Channel을 잠시 Disable 시킵니다.
+	
+	Channel을 Disable하는 이유는 Interrupt가 발생 했을 때의 값을 정확히 고정 시키기 위해서 Diable 합니다. 
+	
+	adc_value에 변환된 ADC 값을 저장한 후 다시 Channel을 Enable 시킨후 Interrupt를 Disable 했다가 
+	
+	Enable 시켜줍니다. (Interrupt Pending 효과)
+	
+	다시 While(1)로 돌아와서 UART0(RS232)로 adc_value의 값을 출력하게 됩니다.
+	
+	ADC_IRQHandler에서는 Delay 함수 뿐아니라 방금 나온 UART0번을 이용하여 메세지를 출력하는 
+	
+	기능 사용을 지양 합니다. 메세지 출력 자체가 작업을 많이 차지 하는 기능이기 때문에 이 또한 딜레이와 같이
+	
+	타이밍 문제가 생길 수 있습니다.
+	
+	---------------------------------------------------------------------------------
+	
+	UART의 개념이 먼저 나왔으니 하이퍼터미널로 메세지를 편히 볼 수 있다는 것만 알고 넘어 가도록 합니다.
+	
+	
+	

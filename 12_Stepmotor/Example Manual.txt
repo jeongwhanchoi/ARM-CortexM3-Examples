@@ -1,0 +1,27 @@
+	
+	StepMotor	Example 설명
+
+	source_code -> Example -> 12_Stepmotor -  예제 경로
+
+--------------------------------------------------------------------------------
+
+	StepMotor 예제는 UART0 (하이퍼터미널)로 사용자의 입력을 받아 해당 횟수 만큼 Step Motor를 제어하는 예제입니다.
+	
+	Motor는 IO Expander 확장 PIN에 장착하기 때문에 IO Expander PIN을 초기화 해야 합니다.
+	
+	Motor_Init(); 함수는 IO Expander 확장 PIN들을 초기화 해줍니다. 
+	
+	UART0을 사용하기 위해 Uart0_Init(); 함수를 호출하고 
+	
+	ch = UART_ReceiveByte(LPC_UART0);를 사용하여 지속적으로 사용자가 유효한 데이터를 입력하는지 체크 합니다.
+	
+	Enter(0x0D)를 눌렀을 때 사용자가 입력한 데이터들을 분석하여 1~9의 데이터가 일치하면 StepMotor_Cycle 함수에 인자값을 넣어
+	
+	Step Motor를 제어합니다. 이 함수는 Step Motor의 제어 함수인데, Step Motor는 다른모터들과 다르게 Step.. 말 그대로 Step (단계)
+	
+	별로 제어를 하게 됩니다. Step Motor에 달려있는 SLA7024M의 Datasheet를 보면 제어하는 방법을 찾을 수 있습니다.
+	
+	Full Step 방식으로 4단계로 제어를 하는데 해당 핀에 0(Low), 1(High) 를 주어 4번을 거쳐서 1바퀴를 돌게 됩니다.
+	
+	순서는  1 0 1 0 - 0 1 1 0 - 0 1 0 1 - 1 0 0 1 로 제어됩니다.  
+	

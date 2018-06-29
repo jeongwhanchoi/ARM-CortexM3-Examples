@@ -1,0 +1,16 @@
+
+	DAC2 Example 설명
+
+	source_code -> Example -> 6_DAC -> DAC2(Speaker)  - 예제 경로
+
+--------------------------------------------------------------------------------
+
+	DAC2 예제는 Digital 신호를 Analog 신호로 Convert하여 스피커를 통해 소리를 출력합니다.
+	
+	DAC1 예제와 같이 P0.26(DAC) Pin을 Alternative Function 2로 설정 합니다.
+	
+	DAC1과는 다르게 DAC_UpdateValue 함수를 통하여 output 값을 Update하여 소리를 출력합니다.
+	
+	
+	
+	

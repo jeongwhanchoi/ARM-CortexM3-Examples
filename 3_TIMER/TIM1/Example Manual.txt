@@ -1,0 +1,35 @@
+
+	TIM1 Example 설명
+
+	source_code -> Example -> 3_TIMER -> TIM1  - 예제 경로
+	
+-------------------------------------------------------------------------------
+
+	TIM1 예제는 Timer0를 사용하여 LED를 제어하는 예제 입니다.
+	
+	기본적인 LED 성정 방법은 동일하며 내부 Timer0 번에 대한 추가 설정이 필요합니다.
+	
+	Timer는 지정된 횟수를 카운터하거나, 일정한 타이밍을 Capture할 때등 여러 기능으로  사용됩니다.
+	
+	특별한 기능을 사용하여 Output을 내려면 GPIO의 설정 및 추가적으로 Alternative Function 설정이 필요합니다.
+	
+	이 예제는 특별한 기능없이 내부적으로 Timer0를 돌려 일정 횟수에 도달하면 TIMER0_IRQHandler로 진입하게 됩니다.
+	
+	TIMER0_Config 함수는 TIMER0에 대한 설정 방법이 정의 되어 있습니다. 
+	
+	TIM_ConfigStruct.PrescaleOption 을 통해 Prescale 값을 어떻게 사용 할 것인지 지정 할 수 있습니다. 
+	(1. Clock 동일시, 2. microsencond 단위) 
+	
+	TIM_ConfigStruct.PrescaleValue는 Option으로 설정 값에 따라 1회 기준을 정의 합니다.
+	
+	Timer는 2개의 채널이 존재하고(0, 1) TIM_MatchConfigStruct.MatchChannel를 통해 채널을 정해줍니다.
+	
+	TIM_MatchConfigStruct.MatchValue는 Timer를 통해 최종적으로 총 몇회 카운트 할지 정하게됩니다.
+
+	TIM_MatchConfigStruct 구조체 구성의 값들을 정확히 파악하시기 바랍니다.
+	
+	MatchValue로 지정된 횟수에 도달하면 TIMER0_IRQHandler로 진입하게 됩니다. 
+	
+	IRQHandler에서는 이전에 설명했던 것처럼 타이밍 문제가 발생 할 수 있기 때문에 최대한 간결하고 Delay 함수는 사용하지 
+
+	않도록 합니다.

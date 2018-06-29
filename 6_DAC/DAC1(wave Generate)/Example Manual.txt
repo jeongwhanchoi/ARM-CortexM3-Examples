@@ -1,0 +1,33 @@
+	
+	DAC1 Example 설명
+
+	source_code -> Example -> 6_DAC1 -> DAC1(Wave Generate)  - 예제 경로
+
+	DAC1 예제는 DMA(Direct Memory Access) 설정이 포함되어 있어 DMA에 대한 이해가 필요
+--------------------------------------------------------------------------------
+
+	DAC1예제는 Digital 신호를 Analog 신호로 Convert하여 스피커를 통해 소리를 출력합니다.
+	
+	UART0를 초기화 해주고 UART0을 통하여 사용자의 입력을 받아 출력 wave를 결정하게 됩니다. 
+	
+	Wave의 종류는 는 1. Sine wave, 2. Triangle wave, 3. Escalator wave를 총 3개를 선택 할 수 있습니다.
+	
+	UART0을 사용하기위한 Uart0_Init 설정을 하고, P0.26 (DAC) PIN을 Alternative Function 2로 설정 합니다.
+	
+	UARTPuts을 통해서 하이퍼터미널로 메세지를 출력하고, option 변수에 현재 wave값을 None으로 초기화 합니다.
+	
+	여기서 선택되는 번호에 따라서 각각의 wave을 만들고 DMA를 통해서 값을 전달하게 됩니다. DMA 설정은 
+	
+	DMA_Init 함수에 전부 포함되어 있으며, Channel / Source Address / Destination Address / Data의 크기를 설정
+	
+	합니다. 
+	
+	DAC_ConverterConfigStruct 구조체의 CNT_ENABLE(설정 값 Reload)과 DMA_ENABLE을  설정하고 DAC 초기화 후 
+	
+	구조체 설정 내용을 적용 시킵니다. 마지막으로 DMA를 활성화하면 선택된 Wave가 계속하여 반복적으로 실행되며 
+
+	while(UARTGetChar(LPC_UART0)!=27); 이 구문을 통해서 UART0번을 통해 27(ESC) 키를 누르기 전까지 계속하여 
+	
+	반복하게 됩니다.
+	
+	

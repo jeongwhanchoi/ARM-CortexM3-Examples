@@ -1,0 +1,18 @@
+<html>
+<body>
+<pre>
+<h1>µVision3 Build Log</h1>
+<h2>Project:</h2>
+C:\Users\Administrator\Desktop\NXP_Example\GPIO\GPIO3\GPIO3.uv2
+Project File Date:  12/09/2009
+
+<h2>Output:</h2>
+Build target 'Target 1'
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling lpc17xx_gpio.c...
+..\..\..\LPC1700CMSIS\Drivers\source\lpc17xx_gpio.c(26): error:  #5: cannot open source input file "lpc17xx_gpio.h": No such file or directory
+compiling GPIO3.c...
+GPIO3.c(3): error:  #5: cannot open source input file "lpc17xx_gpio.h": No such file or directory
+Target not created

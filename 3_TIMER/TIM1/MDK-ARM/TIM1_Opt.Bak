@@ -1,0 +1,56 @@
+### uVision2 Project, (C) Keil Software
+### Do not modify !
+
+ cExt (*.c)
+ aExt (*.s*; *.src; *.a*)
+ oExt (*.obj)
+ lExt (*.lib)
+ tExt (*.txt; *.h; *.inc)
+ pExt (*.plm)
+ CppX (*.cpp)
+ DaveTm { 0,0,0,0,0,0,0,0 }
+
+Target (Target 1), 0x0004 // Tools: 'ARM-ADS'
+GRPOPT 1,(Startup),1,0,0
+GRPOPT 2,(CM3 Core),1,0,0
+GRPOPT 3,(Driver),1,0,0
+GRPOPT 4,(Main),1,0,0
+
+OPTFFF 1,1,2,0,0,0,0,0,<.\startup_LPC17xx.s><startup_LPC17xx.s> 
+OPTFFF 2,2,1,0,0,0,0,0,<..\..\..\Core\CM3\core_cm3.c><core_cm3.c> 
+OPTFFF 2,3,1,0,0,0,0,0,<..\..\..\Core\CM3\system_LPC17xx.c><system_LPC17xx.c> 
+OPTFFF 3,4,1,1,0,0,0,0,<..\..\..\Drivers\source\lpc17xx_gpio.c><lpc17xx_gpio.c> 
+OPTFFF 3,5,1,0,0,232,246,0,<..\..\..\Drivers\source\lpc17xx_timer.c><lpc17xx_timer.c> { 44,0,0,0,0,0,0,0,1,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,233,255,255,255,22,0,0,0,22,0,0,0,44,3,0,0,12,2,0,0 }
+OPTFFF 3,6,1,0,0,0,0,0,<..\..\..\Drivers\source\lpc17xx_clkpwr.c><lpc17xx_clkpwr.c> 
+OPTFFF 3,7,1,0,0,0,0,0,<..\..\..\Drivers\source\lpc17xx_libcfg_default.c><lpc17xx_libcfg_default.c> 
+OPTFFF 4,8,1,738197507,0,1,17,0,<.\TIM1.c><TIM1.c> { 44,0,0,0,2,0,0,0,3,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,233,255,255,255,100,0,0,0,100,0,0,0,77,5,0,0,71,2,0,0 }
+
+ExtF <D:\Work\1_ATC_ARM_CortexM3_NXP\문서자료\강의자료\Source\소스코드_NXP\Drivers\include\lpc17xx_gpio.h> 43,43,0,{ 44,0,0,0,0,0,0,0,1,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,233,255,255,255,44,0,0,0,44,0,0,0,66,3,0,0,34,2,0,0 }
+ExtF <D:\Work\1_ATC_ARM_CortexM3_NXP\문서자료\강의자료\Source\소스코드_NXP\Core\CM3\core_cm3.h> 1326,1348,0,{ 44,0,0,0,0,0,0,0,1,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,233,255,255,255,66,0,0,0,66,0,0,0,88,3,0,0,56,2,0,0 }
+ExtF <D:\Work\1_ATC_ARM_CortexM3_NXP\문서자료\강의자료\Source\소스코드_NXP\Core\CM3\lpc17xx.h> 97,119,0,{ 44,0,0,0,0,0,0,0,1,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,233,255,255,255,88,0,0,0,88,0,0,0,110,3,0,0,78,2,0,0 }
+ExtF <D:\Work\1_ATC_ARM_CortexM3_NXP\문서자료\강의자료\Source\소스코드_NXP\Core\CM3\system_LPC17xx.h> 1,1,0,{ 44,0,0,0,0,0,0,0,1,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,233,255,255,255,110,0,0,0,110,0,0,0,132,3,0,0,100,2,0,0 }
+ExtF <D:\Work\1_ATC_ARM_CortexM3_NXP\문서자료\강의자료\Source\소스코드_NXP\Drivers\include\lpc_types.h> 1,21,0,{ 44,0,0,0,0,0,0,0,1,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,233,255,255,255,132,0,0,0,132,0,0,0,154,3,0,0,122,2,0,0 }
+ExtF <D:\Work\1_ATC_ARM_CortexM3_NXP\문서자료\강의자료\Source\소스코드_NXP\Examples\7_4_TIMER_EX\TIM1\lpc17xx_libcfg.h> 1,27,0,{ 44,0,0,0,0,0,0,0,1,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,233,255,255,255,154,0,0,0,154,0,0,0,176,3,0,0,144,2,0,0 }
+ExtF <D:\Work\1_ATC_ARM_CortexM3_NXP\문서자료\강의자료\Source\소스코드_NXP\Drivers\include\lpc17xx_timer.h> 163,163,0,{ 44,0,0,0,0,0,0,0,1,0,0,0,255,255,255,255,255,255,255,255,252,255,255,255,233,255,255,255,176,0,0,0,176,0,0,0,198,3,0,0,166,2,0,0 }
+
+TARGOPT 1, (Target 1)
+ ADSCLK=12000000
+  OPTTT 1,1,1,0
+  OPTHX 1,65535,0,0,0
+  OPTLX 79,66,8,<.\Lst\>
+  OPTOX 16
+  OPTLT 1,1,1,0,1,1,0,1,0,0,0,0
+  OPTXL 1,1,1,1,1,1,1,0,0
+  OPTFL 1,0,1
+  OPTAX 8
+  OPTBL 0,(Data Sheet)<DATASHTS\PHILIPS\LPC1768_66_65_64_DS.pdf>
+  OPTBL 1,(Short Data)<DATASHTS\PHILIPS\LPC17xx_SD.pdf>
+  OPTBL 2,(User Manual)<DATASHTS\PHILIPS\USER_MANUAL_LPC17xx.pdf>
+  OPTDL (SARMCM3.DLL)(-MPU)(DARMP1.DLL)(-pLPC1768)(SARMCM3.DLL)(-MPU)(TARMP1.DLL)(-pLPC1768)
+  OPTDBG 48126,1,()()()()()()()()()() (BIN\UL2CM3.DLL)()()()
+  OPTKEY 0,(UL2CM3)(-O463 -S0 -C0 -FO7 -FD10000000 -FC800 -FN1 -FF0LPC_IAP_512 -FS00 -FL080000)
+  OPTDF 0x2
+  OPTLE <>
+  OPTLC <>
+EndOpt
+

@@ -1,0 +1,72 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+D:\WORK\ARM_CortexM3_NXP\ARM_CortexM3_NXP Example\Examples\6. MCPWM\MCPWM1\MCPWM1.uvproj
+Project File Date:  12/18/2013
+
+<h2>Output:</h2>
+Rebuild target 'Target 1'
+assembling startup_LPC17xx.s...
+compiling core_cm3.c...
+compiling system_LPC17xx.c...
+compiling lpc17xx_gpio.c...
+..\..\..\Drivers\source\lpc17xx_gpio.c(526): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_gpio.c(532): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_gpio.c(564): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_gpio.c(570): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_gpio.c(596): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_gpio.c(621): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_gpio.c(641): warning:  #186-D: pointless comparison of unsigned integer with zero
+compiling lpc17xx_libcfg_default.c...
+compiling lpc17xx_mcpwm.c...
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(85): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(103): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(105): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(109): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(111): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(115): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(116): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(117): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(119): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(123): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(125): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(170): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(173): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(173): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(175): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(175): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(179): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(179): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(181): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(181): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(185): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(187): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(191): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(193): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(207): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(244): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(246): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(248): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(248): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(250): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(250): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(253): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(253): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(255): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(255): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(258): warning:  #186-D: pointless comparison of unsigned integer with zero
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(358): warning:  #61-D: integer operation result is out of range
+..\..\..\Drivers\source\lpc17xx_mcpwm.c(360): warning:  #61-D: integer operation result is out of range
+compiling lpc17xx_pinsel.c...
+compiling lpc17xx_clkpwr.c...
+compiling MCPWM1.c...
+linking...
+Program Size: Code=3504 RO-data=392 RW-data=16 ZI-data=560  
+".\obj\MCPWM1.axf" - 0 Errors, 45 Warning(s).
+Load "D:\\WORK\\ARM_CortexM3_NXP\\ARM_CortexM3_NXP Example\\Examples\\6. MCPWM\\MCPWM1\\obj\\MCPWM1.axf" 
+Full Chip Erase Done.
+Programming Done.
+Verify OK.
+Application running ...

@@ -1,0 +1,24 @@
+
+	MCPWM Example 설명
+
+	source_code -> Example -> 4_PWM -> MCPWM  - 예제 경로
+
+	source_code -> Example -> 4_PWM -> 예제 참고 
+-------------------------------------------------------------------------------
+
+	MCPWM 예제는 Motor Control PWM을 이용하여 LED Dimming (밝기 조절)을 하는 예제 입니다.
+	
+	MCPWM의 값을 while문을 통해서 0.5초마다 Update하게 됩니다.  
+
+	P1.28 / P1.29는 MCPWM 2 Channel를 사용하고 MCOA(Output A) / MCOB(Output B)로 서로 반대로 작용하게 되어 있습니다. 
+
+	MCOA의 High 구간이 길어질수록 MCOB의 High 구간은 짧아지고 LOW 기간이 길어지는 것입니다. 그렇기 때문에
+	
+	한쪽 LED가 밝아지면 다른쪽 LED는 어두워 지게 됩니다.
+	
+	밝기는 PWMValue = 0 ~ PeriodValue = 300 까지 조절할 수 있고 300이 되면 다시 0으로 돌아가게 됩니다. 
+	
+	MCPWM에 대한 설정은 MCPWM_Config()함수에서 설정하게 됩니다. 여기서 channelUpdateEnable를 Enable 해야 
+	
+	다음에 MCPWM값 update가 가능합니다. 
+	

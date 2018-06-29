@@ -1,0 +1,26 @@
+*** Creating Trace Output File '.\obj\TIM1.tra' Ok.
+### Preparing for ADS-LD.
+### Creating ADS-LD Command Line
+### List of Objects: adding '".\obj\startup_lpc17xx.o"'
+### List of Objects: adding '".\obj\core_cm3.o"'
+### List of Objects: adding '".\obj\system_lpc17xx.o"'
+### List of Objects: adding '".\obj\lpc17xx_gpio.o"'
+### List of Objects: adding '".\obj\lpc17xx_timer.o"'
+### List of Objects: adding '".\obj\lpc17xx_clkpwr.o"'
+### List of Objects: adding '".\obj\lpc17xx_libcfg_default.o"'
+### List of Objects: adding '".\obj\tim1.o"'
+### ADS-LD Command completed:
+--cpu Cortex-M3 ".\obj\startup_lpc17xx.o" ".\obj\core_cm3.o" ".\obj\system_lpc17xx.o" ".\obj\lpc17xx_gpio.o" ".\obj\lpc17xx_timer.o" ".\obj\lpc17xx_clkpwr.o" ".\obj\lpc17xx_libcfg_default.o" ".\obj\tim1.o" 
+--library_type=microlib --ro-base 0x00000000 --entry 0x00000000 --rw-base 0x10000000 --entry Reset_Handler --first __Vectors --strict --summary_stderr --info summarysizes --map --xref --callgraph --symbols 
+--info sizes --info totals --info unused --info veneers 
+ --list ".\Lst\TIM1.map" -o .\obj\TIM1.axf### Preparing Environment (PrepEnvAds)
+### ADS-LD Output File: '.\obj\TIM1.axf'
+### ADS-LD Command File: '.\obj\TIM1.lnp'
+### Checking for dirty Components...
+### Creating CmdFile '.\obj\TIM1.lnp', Handle=0x00000798
+### Writing '.lnp' file
+### ADS-LD Command file '.\obj\TIM1.lnp' is ready.
+### ADS-LD: About to start ADS-LD Thread.
+### ADS-LD: executed with 0 errors
+### Updating obj list
+### LDADS_file() completed.
